@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("bosxixi.Web.Extensions")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("an extension for asp.net mvc")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("bosxixi")]
 [assembly: AssemblyProduct("bosxixi.Web.Extensions")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
