@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bosxixi.Services", "bosxixi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bosxixi.Image", "bosxixi.Image\bosxixi.Image.csproj", "{22531BB6-1392-41DC-8F5D-C3C2970590F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bosxixi.Security", "bosxixi.Security\bosxixi.Security.csproj", "{8B067861-F3EE-4276-B2CD-DDC7C0C798A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{22531BB6-1392-41DC-8F5D-C3C2970590F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22531BB6-1392-41DC-8F5D-C3C2970590F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22531BB6-1392-41DC-8F5D-C3C2970590F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B067861-F3EE-4276-B2CD-DDC7C0C798A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B067861-F3EE-4276-B2CD-DDC7C0C798A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B067861-F3EE-4276-B2CD-DDC7C0C798A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B067861-F3EE-4276-B2CD-DDC7C0C798A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
