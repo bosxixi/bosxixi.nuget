@@ -21,10 +21,10 @@ namespace bosxixi.Extensions
             File.WriteAllText(path, json);
         }
 
-        static public T ReadJsonFileToObject<T>(T obj, string path)
+        static public T ReadJsonFileToObject<T>(string path)
         {
             string json = File.ReadAllText(path);
-            return (T)JsonConvert.DeserializeObject(json, obj.GetType());
+            return (T)JsonConvert.DeserializeObject(json, typeof(T));
         }
     }
 }
