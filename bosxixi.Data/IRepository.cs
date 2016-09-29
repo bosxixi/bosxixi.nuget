@@ -33,5 +33,6 @@ namespace bosxixi.Data
         void RemoveRange(IEnumerable<TEntity> entities);
         DbSqlQuery<TEntity> SqlQuery(string sql, params object[] parameters);
         DbEntityEntry Entry(TEntity entity);
+        TEntity Attach(TEntity entity);
     }
 }

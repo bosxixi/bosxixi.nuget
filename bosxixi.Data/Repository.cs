@@ -129,5 +129,10 @@ namespace bosxixi.Data
         {
             return Context.Entry(entity);
         }
+
+        public TEntity Attach(TEntity entity)
+        {
+            return Context.Set<TEntity>().Attach(entity);
+        }
     }
 }
