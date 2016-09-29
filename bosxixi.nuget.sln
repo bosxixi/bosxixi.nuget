@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bosxixi.Security", "bosxixi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bosxixi.Data", "bosxixi.Data\bosxixi.Data.csproj", "{9D0466D9-8B7B-4E8F-BB73-1675ABF6D137}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bosxixi.Log", "bosxixi.Log\bosxixi.Log.csproj", "{7D98E9F5-B78D-4277-A88B-718D64EE984B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9D0466D9-8B7B-4E8F-BB73-1675ABF6D137}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D0466D9-8B7B-4E8F-BB73-1675ABF6D137}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D0466D9-8B7B-4E8F-BB73-1675ABF6D137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D98E9F5-B78D-4277-A88B-718D64EE984B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D98E9F5-B78D-4277-A88B-718D64EE984B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D98E9F5-B78D-4277-A88B-718D64EE984B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D98E9F5-B78D-4277-A88B-718D64EE984B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
