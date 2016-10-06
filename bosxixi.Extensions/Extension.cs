@@ -9,6 +9,30 @@ namespace bosxixi.Extensions
 {
     public static class Extension
     {
+        public static string HowLongFromNow(this DateTime start)
+        {
+            var now = DateTime.UtcNow.AddHours(8);
+            var dif = now - start;
+            if (dif.TotalMinutes < 60)
+            {
+                return $"{dif.TotalMinutes}m";
+            }
+            if (dif.TotalHours < 24)
+            {
+                return $"{dif.TotalHours}h";
+            }
+
+            var date = String.Format(new System.Globalization.CultureInfo("en-us"), "{0:m}", start).Split();
+            var month = date[0].Substring(0, 3);
+            var day = date[1];
+            return $"{month} {day}";
+        }
+
+        public static string HowLongFromNow(this DateTimeOffset start)
+        {
+            return HowLongFromNow(start.DateTime);
+        }
+
         public static bool IsNumeric(this string s)
         {
             float output;
