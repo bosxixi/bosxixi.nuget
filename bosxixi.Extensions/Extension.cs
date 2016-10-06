@@ -15,11 +15,11 @@ namespace bosxixi.Extensions
             var dif = now - start;
             if (dif.TotalMinutes < 60)
             {
-                return $"{dif.TotalMinutes}m";
+                return $"{(int)dif.TotalMinutes}m";
             }
             if (dif.TotalHours < 24)
             {
-                return $"{dif.TotalHours}h";
+                return $"{(int)dif.TotalHours}h";
             }
 
             var date = String.Format(new System.Globalization.CultureInfo("en-us"), "{0:m}", start).Split();
