@@ -29,6 +29,16 @@ namespace bosxixi.Extensions
             return $"{month} {day}";
         }
 
+        public static string GetName<T>(this T value)  where T : struct, IConvertible
+        {
+            if (!typeof(T).IsEnum)
+            {
+                throw new ArgumentException("T must be an enumerated type");
+            }
+
+            return Enum.GetName(typeof(T), value);
+        }
+
         public static string HowLongFromNow(this DateTimeOffset start)
         {
             return HowLongFromNow(start.DateTime);
