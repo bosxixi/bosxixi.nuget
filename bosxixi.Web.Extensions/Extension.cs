@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using static bosxixi.Extensions.Extension;
@@ -13,6 +14,16 @@ namespace bosxixi.Web.Extensions
 {
     public static class Extension
     {
+        public static IEnumerable<string> GetLogs(this string path)
+        {
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+
+            return File.ReadLines(path, Encoding.Default).Reverse();
+        }
+
         public static void Alert(this TempDataDictionary tempData, AlertType type, string message)
         {
             string glyphicon = string.Empty;

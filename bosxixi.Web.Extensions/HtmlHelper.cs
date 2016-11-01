@@ -40,9 +40,38 @@ namespace bosxixi.Web.HtmlHelpers
             return new MvcHtmlString(str);
         }
 
-        //Submit Button Helper
-        public static MvcHtmlString Alert(this HtmlHelper helper, TempDataDictionary
-        tempDataDictionary)
+        public static MvcHtmlString DisplayLogs(this HtmlHelper helper, IEnumerable<string> logs)
+        {
+            if (logs == null || !logs.Any())
+            {
+                return new MvcHtmlString(null);
+            }
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append($@"<ul class=""list-group"">");
+
+            foreach (var log in logs)
+            {
+                if (log.Contains("INFO"))
+                {
+                    sb.Append($@" <li class=""list-group-item list-group-item-success"">{log}</li>");
+                }
+                else if (log.Contains("FATAL"))
+                {
+                    sb.Append($@" <li class=""list-group-item list-group-item-danger"">{log}</li>");
+                }
+                else
+                {
+                    sb.Append($@" <li class=""list-group-item"">{log}</li>");
+                }
+            }
+
+            sb.Append($@"<ul>");
+          
+            return new MvcHtmlString(sb.ToString());
+        }
+
+        public static MvcHtmlString Alert(this HtmlHelper helper, TempDataDictionary tempDataDictionary)
         {
             var viewData = tempDataDictionary.Where(c => c.Key == "success" || c.Key == "warning" ||
                            c.Key == "info" || c.Key == "danger");
