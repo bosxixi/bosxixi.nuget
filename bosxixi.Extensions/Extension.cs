@@ -10,6 +10,14 @@ namespace bosxixi.Extensions
 {
     public static class Extension
     {
+        public static string GetValidFileName(string origin)
+        {
+            foreach (char c in Path.GetInvalidFileNameChars())
+            {
+                origin = origin.Replace(c, '_');
+            }
+            return origin;
+        }
         public static string HowLongFromNow(this DateTime start)
         {
             var now = DateTime.UtcNow.AddHours(8);
@@ -29,7 +37,7 @@ namespace bosxixi.Extensions
             return $"{month} {day}";
         }
 
-        public static string GetName<T>(this T value)  where T : struct, IConvertible
+        public static string GetName<T>(this T value) where T : struct, IConvertible
         {
             if (!typeof(T).IsEnum)
             {
