@@ -12,11 +12,6 @@ namespace bosxixi.Web.Extensions.Http
 {
     public class TicketAuthorizeAttribute : System.Web.Http.AuthorizeAttribute
     {
-        public Type UserDataType { get; private set; }
-        public TicketAuthorizeAttribute(Type userDataType)
-        {
-            UserDataType = userDataType;
-        }
         protected override bool IsAuthorized(HttpActionContext actionContext)
         {
             HttpRequestHeaders headers = actionContext.Request.Headers;
