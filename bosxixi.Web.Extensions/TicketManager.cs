@@ -30,9 +30,11 @@ namespace bosxixi.Web.Extensions
             response.Cookies.Add(cookie);
         }
 
-        public static void Signout(string encryptTicket, HttpResponseBase response)
+        public static void Signout(HttpResponseBase response)
         {
-            response.Cookies.Remove(FormsAuthentication.FormsCookieName);
+            var c = new HttpCookie(FormsAuthentication.FormsCookieName);
+            c.Expires = DateTime.Now.AddDays(-1);
+            response.Cookies.Set(c);
         }
     }
 }
