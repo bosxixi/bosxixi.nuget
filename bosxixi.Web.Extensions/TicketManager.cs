@@ -13,15 +13,21 @@ namespace bosxixi.Web.Extensions
     {
         public static string SignTicket(string userName, Dictionary<string, string> userData, DateTime expiration)
         {
+           
             FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1,
               userName,
               DateTime.Now,
-              DateTime.Now.AddDays(7),
+              expiration,
               false,
               JsonConvert.SerializeObject(userData),
               FormsAuthentication.FormsCookiePath);
-
+        
             return FormsAuthentication.Encrypt(ticket);
+        }
+
+        public static Identity GetIdentity(string encryptedTicket)
+        {
+            return new Identity(encryptedTicket);
         }
 
         public static void Signin(string encryptTicket, HttpResponseBase response)
